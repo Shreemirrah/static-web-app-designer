@@ -2,64 +2,82 @@ import React, { useState }from 'react';
 import axios from 'axios';
 import './App.css';
 
+interface FormData {
+  [key: string]: string | number | null;
+}
+
+interface DataState {
+  Inputs: {
+    WebServiceInput0: FormData[];
+  };
+  GlobalParameters: {};
+}
+
 function App() {
   const [pred, setPred] = useState("");
-  const [dataDisplay, setDataDisplay] = useState("");
+  const [dataDisplay, setDataDisplay] = useState<DataState>({
+    Inputs: {
+      WebServiceInput0: [],
+    },
+    GlobalParameters: {},
+  });
   const predict = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const formData = new FormData(event.target as HTMLFormElement);
-  const data = {
-    input_data: {
-      columns: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22],
-      index: [0],
-      data: [
-        [
-          formData.get("LIMIT_BAL"),
-          formData.get("SEX"),
-          formData.get("EDUCATION"),
-          formData.get("MARRIAGE"),
-          formData.get("AGE"),
-          formData.get("PAY_0"),
-          formData.get("PAY_2"),
-          formData.get("PAY_3"),
-          formData.get("PAY_4"),
-          formData.get("PAY_5"),
-          formData.get("PAY_6"),
-          formData.get("BILL_AMT1"),
-          formData.get("BILL_AMT2"),
-          formData.get("BILL_AMT3"),
-          formData.get("BILL_AMT4"),
-          formData.get("BILL_AMT5"),
-          formData.get("BILL_AMT6"),
-          formData.get("PAY_AMT1"),
-          formData.get("PAY_AMT2"),
-          formData.get("PAY_AMT3"),
-          formData.get("PAY_AMT4"),
-          formData.get("PAY_AMT5"),
-          formData.get("PAY_AMT6"),
-        ],
-      ],
-    },
-  };
-  const processedData = {
-    input_data: {
-      columns: data.input_data.columns,
-      index: data.input_data.index,
-      data: data.input_data.data.map((item) =>
-        item.map((value) => (typeof value === "string" ? parseInt(value, 10) : value))
-      ),
-    },
-  };
+    const data: DataState = {
+  "Inputs": {
+    "WebServiceInput0": [
+      {
+        "symboling": formData.get("symboling"),
+        "normalized-losses": formData.get("normalized-losses"),
+        "make": formData.get("make"),
+        "fuel-type": formData.get("fuel-type"),
+        "aspiration": formData.get("aspirtation"),
+        "num-of-doors": formData.get("num-of-doors"),
+        "body-style": formData.get("body-style"),
+        "drive-wheels": formData.get("drive-wheels"),
+        "engine-location": formData.get("engine-location"),
+        "wheel-base": formData.get("wheel-base"),
+        "length": formData.get("length"),
+        "width": formData.get("width"),
+        "height": formData.get("height"),
+        "curb-weight":formData.get("curb-weigth"),
+        "engine-type": formData.get("engine-type"),
+        "num-of-cylinders": formData.get("num-of-cylinders"),
+        "engine-size": formData.get("engine-size"),
+        "fuel-system":formData.get("fuel-system"),
+        "bore": formData.get("bore"),
+        "stroke": formData.get("stroke"),
+        "compression-ratio": formData.get("compression-ratio"),
+        "horsepower": formData.get("horsepower"),
+        "peak-rpm": formData.get("peak-rpm"),
+        "city-mpg": formData.get("city-mpg"),
+        "highway-mpg": formData.get("highway-mpg"),
+        "price": formData.get("price")
+      }
+    ]
+  },
+  "GlobalParameters": {}
+};
+  // const processedData = {
+  //   input_data: {
+  //     columns: data.input_data.columns,
+  //     index: data.input_data.index,
+  //     data: data.input_data.data.map((item) =>
+  //       item.map((value) => (typeof value === "string" ? parseInt(value, 10) : value))
+  //     ),
+  //   },
+  // };
 
-  const dataString = JSON.stringify(processedData, null, 2);
+  //const dataString = JSON.stringify(processedData, null, 2);
   try {
-    const response = await axios.post('https://shreemirrah-credit-card-functionapp-test.azurewebsites.net/api/shreemirrah_http_trigger', dataString);
+    const response = await axios.post('https://shreemirrah-function-app-designer.azurewebsites.net/', data);
     setPred(response.data);
     console.log(response);
   } catch (error) {
     setPred('Error: Unable to fetch prediction from Azure Function');
   }
-  setDataDisplay(dataString);
+  setDataDisplay(data);
 
 
 };
