@@ -74,220 +74,240 @@ return (
     </h4>
     <form onSubmit={predict}>
 <div>
-  <label htmlFor="LIMIT_BAL">Limit Balance:</label>
+  <label htmlFor="symboling">Symboling: </label>
   <input
     type="number"
-    id="LIMIT_BAL"
-    name="LIMIT_BAL"
-    placeholder="Enter Limit Balance"
+    id="symboling"
+    name="symboling"
+    placeholder="Enter No of Symboling"
     required
   />
 </div>
 <div>
-  <label htmlFor="SEX">SEX:</label>
-  <input type="text" id="SEX" name="SEX" placeholder="Enter SEX" required />
+  <label htmlFor="make">Make:</label>
+  <input type="text" id="make" name="make" placeholder="Make" required />
 </div>
 <div>
-  <label htmlFor="EDUCATION">EDUCATION:</label>
+  <label htmlFor="fueltype">Fuel Type:</label>
   <input
     type="text"
-    id="EDUCATION"
-    name="EDUCATION"
+    id="fueltype"
+    name="fueltype"
     placeholder="Enter EDUCATION"
     required
   />
 </div>
 <div>
-  <label htmlFor="MARRIAGE">MARRIAGE:</label>
+  <label htmlFor="aspiration">Aspiration:</label>
   <input
     type="text"
-    id="MARRIAGE"
-    name="MARRIAGE"
-    placeholder="Enter MARRIAGE"
+    id="aspiration"
+    name="aspiration"
+    placeholder="Enter aspiration"
     required
   />
 </div>
 <div>
-  <label htmlFor="AGE">AGE:</label>
-  <input type="number" id="AGE" name="AGE" placeholder="Enter AGE" required />
+  <label htmlFor="num-of-doors">Number of doors:</label>
+  <input type="text" id="num-of-doors" name="num-of-doors" placeholder="Enter number of doors" required />
 </div>
 <div>
-  <label htmlFor="PAY_0">Month one Payment:</label>
+  <label htmlFor="body-style">Body Style:</label>
   <input
-    type="number"
-    id="PAY_0"
-    name="PAY_0"
-    placeholder="Enter Month one Payment"
+    type="text"
+    id="body-style"
+    name="body-style"
+    placeholder="Enter Body style"
     required
   />
 </div>
 <div>
-  <label htmlFor="PAY_2">Month Two Payment:</label>
+  <label htmlFor="drive-wheels">Drive wheels:</label>
   <input
-    type="number"
-    id="PAY_2"
-    name="PAY_2"
-    placeholder="Enter Month Two Payment"
+    type="text"
+    id="drive-wheels"
+    name="drive-wheels"
+    placeholder="Enter drive wheels"
     required
   />
 </div>
 <div>
-  <label htmlFor="PAY_3">Month Three Payment:</label>
+  <label htmlFor="engine-location">Engine Location:</label>
   <input
-    type="number"
-    id="PAY_3"
-    name="PAY_3"
-    placeholder="Enter Month Three Payment"
+    type="text"
+    id="engine-location"
+    name="engine-location"
+    placeholder="Enter engine location"
     required
   />
 </div>
 <div>
-  <label htmlFor="PAY_4">Month Four Payment:</label>
+  <label htmlFor="wheel-base">Wheel base:</label>
   <input
     type="number"
-    id="PAY_4"
-    name="PAY_4"
-    placeholder="Enter Month Four Payment"
+    id="wheel-base"
+    name="wheel-base"
+    placeholder="Enter wheel-base"
     required
   />
 </div>
 <div>
-  <label htmlFor="PAY_5">Month 5 Payment:</label>
+  <label htmlFor="length">Length:</label>
   <input
     type="number"
-    id="PAY_5"
-    name="PAY_5"
-    placeholder="Enter Month 5 Payment"
+    id="length"
+    name="length"
+    placeholder="Enter length"
     required
   />
 </div>
 <div>
-  <label htmlFor="PAY_6">Month Six Payment:</label>
+  <label htmlFor="width">Width:</label>
   <input
     type="number"
-    id="PAY_6"
-    name="PAY_6"
-    placeholder="Enter Month Six Payment"
+    id="width"
+    name="width"
+    placeholder="Enter width"
     required
   />
 </div>
 <div>
-  <label htmlFor="BILL_AMT1">Bill Month 1%:</label>
+  <label htmlFor="height">Height:</label>
   <input
     type="number"
-    id="BILL_AMT1"
-    name="BILL_AMT1"
-    placeholder="Enter Bill Month 1%"
+    id="height"
+    name="height"
+    placeholder="Enter height"
     required
   />
 </div>
 <div>
-  <label htmlFor="BILL_AMT2">Bill Month 2%:</label>
+  <label htmlFor="curb-weight">Curb Weight:</label>
   <input
     type="number"
-    id="BILL_AMT2"
-    name="BILL_AMT2"
-    placeholder="Enter Bill Month 2%"
+    id="curb-weight"
+    name="curb-weight"
+    placeholder="Enter curb-weight"
     required
   />
 </div>
 <div>
-  <label htmlFor="BILL_AMT3">Bill Month 3%:</label>
+  <label htmlFor="engine-type">Engine Type:</label>
   <input
     type="number"
-    id="BILL_AMT3"
-    name="BILL_AMT3"
-    placeholder="Enter Bill Month 3%"
+    id="engine-type"
+    name="engine-type"
+    placeholder="Enter engine type"
     required
   />
 </div>
 <div>
-  <label htmlFor="BILL_AMT4">Bill Month 4%:</label>
+  <label htmlFor="num-of-cylinders">Number of cylinders:</label>
   <input
     type="number"
-    id="BILL_AMT4"
-    name="BILL_AMT4"
-    placeholder="Enter Bill Month 4%"
+    id="num-of-cylinders"
+    name="num-of-cylinders"
+    placeholder="Enter number of cylinders"
     required
   />
 </div>
 <div>
-  <label htmlFor="BILL_AMT5">Bill Month 5%:</label>
+  <label htmlFor="engine-size">Bill Month 5%:</label>
   <input
     type="number"
-    id="BILL_AMT5"
-    name="BILL_AMT5"
-    placeholder="Enter Bill Month 5%"
+    id="engine-size"
+    name="engine-size"
+    placeholder="Enter engine size"
     required
   />
 </div>
 <div>
-  <label htmlFor="BILL_AMT6">Bill Month 6%:</label>
+  <label htmlFor="fuel-system">Fuel system:</label>
   <input
     type="number"
-    id="BILL_AMT6"
-    name="BILL_AMT6"
-    placeholder="Enter Bill Month 6%"
+    id="fuel-system"
+    name="fuel-system"
+    placeholder="Enter fuel system"
     required
   />
 </div>
 <div>
-  <label htmlFor="PAY_AMT1">Pay Month 1%:</label>
+  <label htmlFor="bore">Bore:</label>
   <input
     type="number"
-    id="PAY_AMT1"
-    name="PAY_AMT1"
-    placeholder="Enter Pay Month 1%"
+    id="bore"
+    name="bore"
+    placeholder="Enter bore"
     required
   />
 </div>
 <div>
-  <label htmlFor="PAY_AMT2">Pay Month 2%:</label>
+  <label htmlFor="stroke">Stroke:</label>
   <input
     type="number"
-    id="PAY_AMT2"
-    name="PAY_AMT2"
-    placeholder="Enter Pay Month 2%"
+    id="stroke"
+    name="stroke"
+    placeholder="Enter stroke"
     required
   />
 </div>
 <div>
-  <label htmlFor="PAY_AMT3">Pay Month 3%:</label>
+  <label htmlFor="compression-ratio">Compression Ratio:</label>
   <input
     type="number"
-    id="PAY_AMT3"
-    name="PAY_AMT3"
-    placeholder="Enter Pay Month 3%"
+    id="compression-ratio"
+    name="compression-ratio"
+    placeholder="Enter compression-ratio"
     required
   />
 </div>
 <div>
-  <label htmlFor="PAY_AMT4">Pay Month 4%:</label>
+  <label htmlFor="horsepower">Horse Power:</label>
   <input
     type="number"
-    id="PAY_AMT4"
-    name="PAY_AMT4"
-    placeholder="Enter Pay Month 4%"
+    id="horsepower"
+    name="horsepower"
+    placeholder="Enter horsepower"
     required
   />
 </div>
 <div>
-  <label htmlFor="PAY_AMT5">Pay Month 5%:</label>
+  <label htmlFor="peak-rpm">Peak RPM:</label>
   <input
     type="number"
-    id="PAY_AMT5"
-    name="PAY_AMT5"
-    placeholder="Enter Pay Month 5%"
+    id="peak-rpm"
+    name="peak-rpm"
+    placeholder="Enter peak-rpm"
     required
   />
 </div>
 <div>
-  <label htmlFor="PAY_AMT6">Pay Month 6%:</label>
+  <label htmlFor="city-mpg">city-mpg:</label>
   <input
     type="number"
-    id="PAY_AMT6"
-    name="PAY_AMT6"
-    placeholder="Enter Pay Month 6%"
+    id="city-mpg"
+    name="city-mpg"
+    placeholder="Enter city-mpg"
+    required
+  />
+</div>
+<div>
+  <label htmlFor="highway-mpg">highway-mpg:</label>
+  <input
+    type="number"
+    id="highway-mpg"
+    name="highway-mpg"
+    placeholder="Enter highway-mpg"
+    required
+  />
+</div>
+<div>
+  <label htmlFor="price">Price:</label>
+  <input
+    type="number"
+    id="price"
+    name="price"
+    placeholder="Enter price"
     required
   />
 </div>
