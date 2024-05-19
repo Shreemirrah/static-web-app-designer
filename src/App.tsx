@@ -6,12 +6,7 @@ interface FormData {
   [key: string]: string | number | null;
 }
 
-interface DataState {
-  Inputs: {
-    WebServiceInput0: FormData[];
-  };
-  GlobalParameters: {};
-}
+
 
 function App() {
   const [pred, setPred] = useState("");
@@ -75,7 +70,6 @@ for (const input of json.Inputs.WebServiceInput0) {
   }
 }
 
-const output = JSON.stringify(json, null, 2);
 
 setData(json);
   try {
