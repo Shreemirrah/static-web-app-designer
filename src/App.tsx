@@ -79,7 +79,7 @@ const output = JSON.stringify(json, null, 2);
 
 setData(json);
   try {
-    const response = await axios.post('https://shreemirrah-function-app-designer.azurewebsites.net/api/http_trigger', data);
+    const response = await axios.post('https://shreemirrah-designer-final.azurewebsites.net/api/http_trigger', data);
     setPred(response.data);
     console.log(response);
   } catch (error) {
@@ -88,11 +88,6 @@ setData(json);
 
 
 };
-
-
-
-
-
 
 return (
   <div className="App">
